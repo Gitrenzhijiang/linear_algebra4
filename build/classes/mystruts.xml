@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts> 
+    <package> 
+     
+        <action name="user"  class="com.linear.action.UserAction"> 
+        
+            <result name="index">/WEB-INF/fpages/studentindex.jsp</result>
+            <result name="login">/WEB-INF/fpages/login.jsp</result>
+            <result name="regist">/WEB-INF/fpages/studentsignup.jsp</result>
+            <result name="emailcheck">/WEB-INF/fpages/emailcheck.jsp</result>
+            <result name="message">/WEB-INF/fpages/message.jsp</result>
+            <result name="userinfo">/WEB-INF/fpages/studentinfo.jsp</result>
+            <result name="infoupdate">/WEB-INF/fpages/studentinfoupdate.jsp</result>
+            <result name="teachersignup">/WEB-INF/fpages/teachersignup.jsp</result>
+            <result name="signupcheck">/WEB-INF/fpages/adminteachersignupcheck.jsp</result>
+        </action> 
+        <action name="question"  class="com.linear.action.QuestionAction"> 
+            
+            <result name="answerquestion">/WEB-INF/fpages/studentanswerquestion.jsp</result>
+        	<result name="answerdiscuss">/WEB-INF/fpages/answerdiscuss.jsp</result>
+        	
+        	<result name="errorpage">/WEB-INF/fpages/404.jsp</result>
+        	<result name="ask">/WEB-INF/fpages/studentask.jsp</result>
+        	<result name="message">/WEB-INF/fpages/message.jsp</result>
+        </action> 
+        
+         <action name="answer"  class="com.linear.action.AnswerAction"> 
+            <result name="answerquestion">/WEB-INF/fpages/studentanswerquestion.jsp</result>
+            <result name="message">/WEB-INF/fpages/message.jsp</result>
+        </action> 
+        
+        <action name="notice"  class="com.linear.action.NoticeAction"> 
+        	<result name="message">/WEB-INF/fpages/message.jsp</result>
+            <result name="allnotice">/WEB-INF/fpages/studentallnotice.jsp</result>
+            <result name="noticeadd">/WEB-INF/fpages/teachernoticeadd.jsp</result>
+            <result name="noticedelete">/WEB-INF/fpages/teachernoticedelete.jsp</result>
+        </action> 
+        <action name="agorithm"  class="com.linear.action.AgorithmAction"> 
+        	<result name="agorithmlist">/WEB-INF/fpages/studentagorithmlist.jsp</result>
+        	 <result name="agorithmadd">/WEB-INF/fpages/studentagorithmadd.jsp</result>
+        	 <result name="message">/WEB-INF/fpages/message.jsp</result>
+        	 <result name="agodesc">/WEB-INF/fpages/studentagodesc.jsp</result>
+        </action> 
+        <action name="mail"  class="com.linear.action.MailAction"> 
+        	<result name="mailadd">/WEB-INF/fpages/studentmailadd.jsp</result>
+        	<result name="mail">/WEB-INF/fpages/studentmail.jsp</result>
+        </action>
+        <action name="tres"  class="com.linear.action.TeachResourceAction"> 
+        	<result name="teachresource">/WEB-INF/fpages/studentteachresource.jsp</result>
+        	<result name="teachresourceupload">/WEB-INF/fpages/teacherteachresourceupload.jsp</result>
+        	<result name="teachresourcedelete">/WEB-INF/fpages/teacherteachresourcedelete.jsp</result>
+        </action>
+        <action name="task"  class="com.linear.action.TaskAction"> 
+        	<result name="message">/WEB-INF/fpages/message.jsp</result>
+        	<result name="taskadd">/WEB-INF/fpages/teachertaskadd.jsp</result>
+        	<result name="mytask">/WEB-INF/fpages/studenttask.jsp</result>
+        	<result name="taskdesc">/WEB-INF/fpages/studenttaskdesc.jsp</result>
+        	<result name="submittask">/WEB-INF/fpages/studentsubmittask.jsp</result>
+        	<result name="errorpage">/WEB-INF/fpages/404.jsp</result>
+        	<result name="list2finish">/WEB-INF/fpages/teachertasklist2finish.jsp</result>
+        	<result name="taskfinish">/WEB-INF/fpages/teachertaskfinish.jsp</result>
+        	<result name="remarktf">/WEB-INF/fpages/teacherremarktaskfinish.jsp</result>
+        	<result name="remarkdesc">/WEB-INF/fpages/studentremarkdesc.jsp</result>
+        </action>
+        <action name="resource"  class="com.linear.action.ResourceAction"> 
+        	<result name="resource">/WEB-INF/fpages/adminresource.jsp</result>
+        	<result name="resourceadd">/WEB-INF/fpages/adminresourceadd.jsp</result>
+        </action>
+        
+        <action name="ojs"  class="com.linear.action.OnlineJSAction"> 
+        	<result name="hlsqz">/WEB-INF/fpages/hlsqiuz.jsp</result>
+        	<result name="juzjiachen">/WEB-INF/fpages/juzjiachen.jsp</result>
+        	<result name="nizzz">/WEB-INF/fpages/nizzz.jsp</result>
+        	<result name="jzxxtzz">/WEB-INF/fpages/jzxxtzz.jsp</result>
+        	<result name="jzxs">/WEB-INF/fpages/jzxs.jsp</result>
+        </action>
+        <!-- 自定义全局拦截器 -->
+        <inteceptor name="power" class="com.linear.web.inteceptor.PowerInteceptor"></inteceptor>
+     
+    </package> 
+</struts> 

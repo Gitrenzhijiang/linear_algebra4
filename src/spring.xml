@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- DAO -->
+	<bean id="agorithmDao" class="com.linear.dao.imp.AgorithmDaoImp" ></bean>
+	<bean id="answerDao" class="com.linear.dao.imp.AnswerDaoImp" ></bean>
+	<bean id="clickgoodDao" class="com.linear.dao.imp.ClickgoodDaoImp" ></bean>
+	<bean id="discussDao" class="com.linear.dao.imp.DiscussDaoImp" ></bean>
+	<bean id="inboxDao" class="com.linear.dao.imp.InboxDaoImp" ></bean>
+	<bean id="noticeDao" class="com.linear.dao.imp.NoticeDaoImp" >
+		<property name="userDao" ref="userDao"></property>
+		<property name="nisDao" ref="noticeisreadDao"></property>
+	</bean>
+	<bean id="noticeisreadDao" class="com.linear.dao.imp.NoticeisreadDaoImp" ></bean>
+	<bean id="problemDao" class="com.linear.dao.imp.ProblemDaoImp" ></bean>
+	<bean id="resourceDao" class="com.linear.dao.imp.ResourceDaoImp" ></bean>
+	<bean id="roleDao" class="com.linear.dao.imp.RoleDaoImp" ></bean>
+	<bean id="taskDao" class="com.linear.dao.imp.TaskDaoImp" >
+		<property name="userDao" ref="userDao"></property>
+		<property name="tfDao" ref="taskfinishDao"></property>
+	</bean>
+	<bean id="taskfinishDao" class="com.linear.dao.imp.TaskfinishDaoImp" >
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean id="teachresourceDao" class="com.linear.dao.imp.TeachresourceDaoImp" ></bean>
+	<bean id="userDao" class="com.linear.dao.imp.UserDaoImp" ></bean>
+	<!-- service -->
+	<bean id="agorithmService" class="com.linear.service.AgorithmService" autowire="byName"></bean>
+	<bean id="answerService" class="com.linear.service.AnswerService" autowire="byType"></bean>
+	<bean id="inboxService" class="com.linear.service.InboxService" autowire="byName"></bean>
+	<bean id="noticeService" class="com.linear.service.NoticeService" autowire="byName"></bean>
+	<bean id="problemService" class="com.linear.service.ProblemService" autowire="byName"></bean>
+	<bean id="resourceService" class="com.linear.service.ResourceService" autowire="byName"></bean>
+	<bean id="roleService" class="com.linear.service.RoleService" autowire="byName"></bean>
+	<bean id="taskService" class="com.linear.service.TaskService" autowire="byName"></bean>
+	<bean id="teachresourceService" class="com.linear.service.TeachresourceService" autowire="byName"></bean>
+	<bean id="userService" class="com.linear.service.UserService" autowire="byName"></bean>
+	<!-- Action -->
+	<bean id="headLoad" class="com.linear.action.HeadLoad" autowire="byName"></bean>
+	<bean id="user" class="com.linear.action.UserAction" autowire="byName" scope="prototype"></bean>
+	<bean id="question" class="com.linear.action.QuestionAction" autowire="byName" scope="prototype"></bean>
+	<bean id="answer" class="com.linear.action.AnswerAction" autowire="byName" scope="prototype"></bean>
+	<bean id="notice" class="com.linear.action.NoticeAction" autowire="byName" scope="prototype"></bean>
+	<bean id="agorithm" class="com.linear.action.AgorithmAction" autowire="byName" scope="prototype"></bean>
+	<bean id="mail" class="com.linear.action.MailAction" autowire="byName" scope="prototype"></bean>
+	<bean id="tres" class="com.linear.action.TeachResourceAction" autowire="byName" scope="prototype"></bean>
+	<bean id="task" class="com.linear.action.TaskAction" autowire="byName" scope="prototype"></bean>
+	<bean id="resource" class="com.linear.action.ResourceAction" autowire="byName" scope="prototype"></bean>
+	<bean id="ojs" class="com.linear.action.OnlineJSAction" autowire="byName" scope="prototype"></bean>
+	
+	<!-- 拦截器 -->
+	<bean id="power" class="com.linear.web.inteceptor.PowerInteceptor" autowire="byName"></bean>
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts> 
+    <package> 
+    	<inteceptor name="ChainAction" class="com.ren.struts.core.inteceptor.ChainActionInteceptor"></inteceptor>
+    	
+       <inteceptor name="AwareContext" class="com.ren.struts.core.inteceptor.AwareContextInteceptor"></inteceptor>
+        
+       <inteceptor name="DynamicMethod" class="com.ren.struts.core.inteceptor.DynamicMethodInteceptor"></inteceptor>
+       
+       <inteceptor name="encoding" class="com.ren.struts.core.inteceptor.EncodingInteceptor"></inteceptor>
+       
+    </package> 
+</struts> 
